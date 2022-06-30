@@ -15,6 +15,8 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 p,
@@ -34,15 +36,24 @@ ul {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .header {
@@ -181,12 +192,10 @@ ul {
 .feateres__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
-.features__item {
-  width: 270px;
-}
 .features__item::before {
   display: block;
   content: "";
@@ -195,6 +204,21 @@ ul {
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (min-width: 480px) {
+  .features__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 
 .icon-anthena::before {
@@ -222,6 +246,11 @@ ul {
 
 .busines {
   padding: 94px 0;
+}
+@media screen and (max-width: 1199px) {
+  .busines {
+    display: none;
+  }
 }
 
 .busines-title {
@@ -367,16 +396,30 @@ ul {
 
 .customers-logo-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .customer-logo {
   height: 92px;
   width: 170px;
 }
-.customer-logo:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .customer-logo {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customer-logo {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customer-logo {
+    width: 170px;
+  }
 }
 
 .customer-link {

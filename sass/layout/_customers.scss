@@ -16,17 +16,27 @@
 
 .customers-logo-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .customer-logo {
   height: 92px;
   width: 170px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 480px) {
+    width: 210px;
   }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }
 
 .customer-link {

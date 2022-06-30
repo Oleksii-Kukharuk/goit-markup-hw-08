@@ -1,5 +1,8 @@
 .busines {
   padding: 94px 0;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .busines-title {
   font-weight: 700;

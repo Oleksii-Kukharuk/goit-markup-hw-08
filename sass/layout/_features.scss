@@ -13,11 +13,11 @@
 .feateres__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .features__item {
-  width: 270px;
   &::before {
     display: block;
     content: "";
@@ -26,6 +26,15 @@
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
   }
 }
 
