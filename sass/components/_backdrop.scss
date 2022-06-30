@@ -1,0 +1,13 @@
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(84, 111, 133, 0.42);
+
+  top: 0;
+  transition: opacity 500ms, visibility 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
