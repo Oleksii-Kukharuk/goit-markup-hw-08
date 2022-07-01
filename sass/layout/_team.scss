@@ -16,6 +16,11 @@
 .team__list {
   list-style: none;
   display: flex;
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .team__item {
@@ -24,8 +29,16 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1199px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
   }
 }
 
