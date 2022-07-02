@@ -23,7 +23,7 @@
     <title>Web Studio</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <a class="logo" href="./index.html"
           ><span class="logo--blue">Web</span>Studio</a
@@ -59,8 +59,57 @@
             >
           </li>
         </ul>
+        <button class="menu-open-btn" type="button">
+          <svg class="icon-open-btn" width="40" height="40">
+            <use href="./images/studia-svg.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <button class="menu-close-btn" type="button">
+          <svg class="icon-close-btn" width="40" height="40">
+            <use
+              href="./images/studia-svg.svg#icon-close-black-18dp-2-1"
+            ></use>
+          </svg>
+        </button>
+        <div class="container">
+          <nav class="mob-menu__navigation">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link curent-mob" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+            <ul class="mod-connect list">
+            
+              <li class="mob-connect__link">
+                <a class="mob-connect__link" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-connect__link">
+                <a class="mob-connect__mail-link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+              <ul class="mob-social">
+                <li class="mob-social-item"><a class="link" href="">Instagram</a></li>
+                <li class="mob-social-item"><a class="link" href="">Twitter</a></li>
+                <li class="mob-social-item"><a class="link" href="">Facebook</a></li>
+                <li class="mob-social-item"><a class="link" href="">Linkedin</a></li>
+              </ul>
+            </div>
+            </ul>
+        
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="container">
@@ -147,7 +196,12 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item worker-card">
-              <img src="./images/igor.jpg" width="270" alt="Игорь" />
+              <img
+                srcset="./images/igor.jpg 1x, ./images/igor-x2.jpg 2x"
+                src="./images/igor.jpg"
+                width="270"
+                alt="Игорь"
+              />
               <div class="worker-card__item">
                 <h3 class="worker-card__name">Игорь Демьяненко</h3>
                 <p class="worker-card__position" lang="en">Product Designer</p>
@@ -191,7 +245,12 @@
               </div>
             </li>
             <li class="team__item worker-card">
-              <img src="./images/olya.jpg" width="270" alt="Оля" />
+              <img
+                srcset="./images/olya.jpg 1x, ./images/olya-x2.jpg 2x"
+                src="./images/olya.jpg"
+                width="270"
+                alt="Оля"
+              />
               <div class="worker-card__item">
                 <h3 class="worker-card__name">Ольга Репина</h3>
                 <p class="worker-card__position" lang="en">
@@ -237,7 +296,12 @@
               </div>
             </li>
             <li class="team__item worker-card">
-              <img src="./images/kolya.jpg" width="270" alt="Коля" />
+              <img
+                srcset="./images/kolya.jpg 1x, ./images/kolya-x2.jpg 2x"
+                src="./images/kolya.jpg"
+                width="270"
+                alt="Коля"
+              />
               <div class="worker-card__item">
                 <h3 class="worker-card__name">Николай Тарасов</h3>
                 <p class="worker-card__position" lang="en">Marketing</p>
@@ -281,7 +345,12 @@
               </div>
             </li>
             <li class="team__item worker-card">
-              <img src="./images/misha.jpg" width="270" alt="Миша" />
+              <img
+                srcset="./images/misha.jpg 1x, ./images/misha-x2.jpg 2x"
+                src="./images/misha.jpg"
+                width="270"
+                alt="Миша"
+              />
               <div class="worker-card__item">
                 <h3 class="worker-card__name">Михаил Ермаков</h3>
                 <p class="worker-card__position" lang="en">UI Designer</p>
@@ -521,5 +590,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
