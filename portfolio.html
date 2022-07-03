@@ -59,6 +59,64 @@
             >
           </li>
         </ul>
+        <button class="menu-open-btn" type="button">
+          <svg class="icon-open-btn" width="40" height="40">
+            <use href="./images/studia-svg.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden">
+        <button class="menu-close-btn" type="button">
+          <svg class="icon-close-btn" width="40" height="40">
+            <use href="./images/studia-svg.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
+        <div class="container">
+          <nav class="mob-menu__navigation">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link curent-mob" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="mod-connect list">
+            <li class="mob-connect__link">
+              <a class="mob-connect__link" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mob-connect__link">
+              <a
+                class="mob-connect__mail-link"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+            <ul class="mob-social">
+              <li class="mob-social-item">
+                <a class="link" href="">Instagram</a>
+              </li>
+              <li class="mob-social-item">
+                <a class="link" href="">Twitter</a>
+              </li>
+              <li class="mob-social-item">
+                <a class="link" href="">Facebook</a>
+              </li>
+              <li class="mob-social-item">
+                <a class="link" href="">Linkedin</a>
+              </li>
+            </ul>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -86,12 +144,32 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href="">
                 <div class="overlay">
-                  <img
-                    src="./images/tech.jpg"
-                    alt="браузер на ноуте"
-                    width="370"
-                  />
-
+                  <picture>
+                    <source
+                      srcset="./images/tech.jpg 1x, ./images/tech-2x.jpg 2x"
+                      media="(min-width: 1200px)
+                      "
+                    />
+                    <source
+                      srcset="
+                        ./images/tech-tablet.jpg    1x,
+                        ./images/tech-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tech-mob.jpg    1x,
+                        ./images/tech-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/tech.jpg"
+                      alt="браузер на ноуте"
+                      width="370"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -107,11 +185,35 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href="">
                 <div class="overlay">
-                  <img
-                    src="./images/basketball.jpg"
-                    alt="баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/basketball.jpg    1x,
+                        ./images/basketball-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basketball-tablet.jpg    1x,
+                        ./images/basketball-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/basketball-mob.jpg    1x,
+                        ./images/basketball-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/basketball.jpg"
+                      alt="баскетбол"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="overlay-text">Крутой текст про баскетбол</p>
                 </div>
                 <div class="portfolio-items">
@@ -125,11 +227,37 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href="">
                 <div class="overlay">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/seafood.jpg    1x,
+                      ./images/seafood-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+                  <source
+                      srcset="
+                      ./images/seafood-tablet.jpg    1x,
+                      ./images/seafood-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                  </picture>
+                  <source
+                      srcset="
+                      ./images/seafood-mob.jpg    1x,
+                      ./images/seafood-mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
                     src="./images/seafood.jpg"
                     alt="сиафуд лого"
                     width="370"
                   />
+                  </picture>
+                  
                   <p class="overlay-text">очень вкусные морепродукты</p>
                 </div>
                 <div class="portfolio-items">
@@ -141,7 +269,30 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href="">
                 <div class="overlay">
-                  <img src="./images/prime.jpg" alt="наушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/prime.jpg    1x,
+                      ./images/prime-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/prime-tablet.jpg    1x,
+                      ./images/prime-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/prime-mob.jpg    1x,
+                      ./images/prime-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/prime.jpg" alt="наушники" width="370" />
+                  </picture>
                   <p class="overlay-text">очень кртые наушники</p>
                 </div>
                 <div class="portfolio-items">
@@ -153,7 +304,32 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href=""
                 ><div class="overlay">
-                  <img src="./images/boxes.jpg" alt="коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/boxes.jpg    1x,
+                      ./images/box-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                  </picture>
+                  <source
+                      srcset="
+                      ./images/box-tablet.jpg    1x,
+                      ./images/box-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                  </picture>
+                  <source
+                      srcset="
+                      ./images/box-mob.jpg    1x,
+                      ./images/box-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/boxes.jpg" alt="коробки" width="370" />
+                  </picture>
                   <p class="overlay-text">лютые коробки</p>
                 </div>
                 <div class="portfolio-items">
@@ -165,11 +341,34 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href=""
                 ><div class="overlay">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/insperation.jpg    1x,
+                      ./images/insparation-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/insparation-tablet.jpg    1x,
+                      ./images/insparation-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/insperation-mob.jpg    1x,
+                      ./images/insparation-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
                     src="./images/insperation.jpg"
                     alt="моноблок эпл"
                     width="370"
                   />
+                  </picture>
                   <p class="overlay-text">Алиса в стране чудес</p>
                 </div>
                 <div class="portfolio-items">
@@ -181,7 +380,30 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href=""
                 ><div class="overlay">
+                  <picture>
+                    <source
+                    srcset="
+                    ./images/limited.jpg    1x,
+                    ./images/limited-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                    ./images/limited-tablet.jpg    1x,
+                    ./images/limited-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                    ./images/limited-mob.jpg    1x,
+                    ./images/limited-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
                   <img src="./images/limited.jpg" alt="журнал" width="370" />
+                  </picture>
                   <p class="overlay-text">книги для всех и каждого</p>
                 </div>
                 <div class="portfolio-items">
@@ -193,7 +415,30 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href=""
                 ><div class="overlay">
+                  <picture>
+                    <source
+                    srcset="
+                    ./images/lab.jpg    1x,
+                    ./images/lab-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                    ./images/lab-tablet.jpg    1x,
+                    ./images/lab-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                    ./images/lab-mob.jpg    1x,
+                    ./images/lab-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
                   <img src="./images/lab.jpg" alt="бирка" width="370" />
+                  </picture>
                   <p class="overlay-text">
                     лучшая маретинговая прогррамма в мире
                   </p>
@@ -207,11 +452,34 @@
             <li class="portfolio-cards">
               <a class="link portfolio-link" href=""
                 ><div class="overlay">
+                  <picture>
+                    <source
+                    srcset="
+                    ./images/busines.jpg    1x,
+                    ./images/busines-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                    ./images/busines-tablet.jpg    1x,
+                    ./images/busines-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                    ./images/busines-mob.jpg    1x,
+                    ./images/busines-mob-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
                   <img
                     src="./images/busines.jpg"
                     alt="работа на ноутбуке"
                     width="370"
                   />
+                  </picture>
                   <p class="overlay-text">научим вас делать бабки</p>
                 </div>
                 <div class="portfolio-items">

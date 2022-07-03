@@ -55,7 +55,17 @@ ul {
     width: 1200px;
   }
 }
+@media screen and (max-width: 1199px) {
+  header .container {
+    border-bottom: 1px solid #ececec;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .header {
+    height: 60px;
+  }
+}
 @media screen and (min-width: 1199px) {
   .header {
     height: 80px;
@@ -101,7 +111,7 @@ ul {
   letter-spacing: 0.02em;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 768px) {
   .navigation {
     display: none;
   }
@@ -151,9 +161,14 @@ ul {
   width: 100%;
   height: 4px;
   left: 0;
-  top: 38px;
+  top: 29px;
   background: var(--accent-color);
   border-radius: 2px;
+}
+@media screen and (min-width: 1199px) {
+  .curent::after {
+    top: 38px;
+  }
 }
 
 .contacts {
@@ -166,12 +181,20 @@ ul {
   display: flex;
   margin-left: auto;
 }
-.contacts .contacts__link:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1199px) {
+  .contacts .contacts__link:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .contacts {
     display: none;
+  }
+}
+@media tscreen and (min-width: 764px), (max-width: 1199px) {
+  .contacts {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -184,8 +207,22 @@ ul {
   margin-right: 15px;
 }
 
+.menu-open-btn {
+  fill: #212121;
+}
+@media screen and (min-width: 767px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+.menu-open-btn:hover, .menu-open-btn:focus {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
 .mob-menu {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -804,6 +841,20 @@ address {
   margin-left: 30px;
   margin-top: 30px;
 }
+@media screen and (min-width: 768px), (max-width: 1199px) {
+  .portfolio-cards {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio-cards {
+    flex-basis: 100%;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
 
 .portfolio-items {
   padding: 20px 24px;
@@ -816,8 +867,19 @@ address {
   display: flex;
   text-decoration: none;
   list-style: none;
-  margin-bottom: 50px;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .filter-list {
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-btn {
@@ -844,6 +906,7 @@ address {
 
 .filter-item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .portfolio-link {
@@ -903,6 +966,12 @@ address {
   transform: translate(-50%, -50%) scale(1);
   transition-duration: 300ms;
 }
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
 
 .modal-title {
   font-weight: 700;
@@ -912,6 +981,12 @@ address {
   letter-spacing: 0.03em;
   margin-bottom: 12px;
   color: var(--prime-color);
+}
+@media screen and (max-width: 1199px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .modal-field {
@@ -989,6 +1064,13 @@ address {
   letter-spacing: 0.03em;
   color: var(--secondary-color);
   margin-left: 7px;
+}
+@media screen and (max-width: 1199px) {
+  .modal-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .link-modal {

@@ -1,4 +1,8 @@
 .modal {
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
   width: 528px;
   min-height: 521px;
   background-color: var(--background-color);
@@ -13,6 +17,10 @@
 }
 
 .modal-title {
+  @media screen and (max-width: 1199px) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -93,6 +101,11 @@
   fill: var(--accent-color);
 }
 .modal-text {
+  @media screen and (max-width: 1199px) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+  }
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
