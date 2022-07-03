@@ -1,15 +1,17 @@
 .header {
+  border-bottom: 1px solid #ececec;
   @include tablet {
-    height: 60px;
+    height: 80px;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
   @include desktop {
     height: 80px;
     padding-top: 32px;
     padding-bottom: 32px;
     background-color: var(--background-color);
-    border-bottom: 1px solid #ececec;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     height: 60px;
     padding: 16px 15px;
   }
@@ -100,6 +102,9 @@
   height: 4px;
   left: 0;
   top: 29px;
+  @include tablet {
+    top: 43px;
+  }
   @include desktop {
     top: 38px;
   }

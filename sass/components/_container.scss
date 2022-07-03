@@ -11,9 +11,4 @@
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
-  header & {
-    @media screen and (max-width: 1199px) {
-      border-bottom: 1px solid #ececec;
-    }
-  }
 }
